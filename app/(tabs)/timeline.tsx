@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const explore = () => {
+const timeline = () => {
   return (
     <View className='flex-1 justify-center items-center'>
-      <Text>explore</Text>
+      <Text>timeline</Text>
     </View>
   )
 }
 
-export default explore
+export default timeline
