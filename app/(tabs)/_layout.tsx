@@ -4,6 +4,26 @@ import React from 'react';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
+import { Text, View } from 'react-native';
+
+
+const TabIcon = ({ icon, color, name, focused }:
+  { icon: string | any; color: string; name: string; focused: boolean }
+) => {
+  return (
+    <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+      <MaterialCommunityIcons
+        name={icon}
+        size={24}
+        color={color}
+      />
+      <Text style={{ color, fontSize: 12, fontWeight: '500' }}>
+        {name}
+      </Text>
+    </View>
+  );
+};
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -11,24 +31,77 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
+        tabBarShowLabel: false,
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
       }}>
       <Tabs.Screen
-        name="timeline"
+        name="browse"
         options={{
-          title: 'Home',
+          title: 'Browse',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            <TabIcon
+              icon={"guy-fawkes-mask"}
+              color={color}
+              name="Timeline"
+              focused={focused}
+            />
           ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="interest"
         options={{
-          title: 'Explore',
+          title: 'Interest',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <TabIcon
+              icon={"fire"}
+              color={color}
+              name="Timeline"
+              focused={focused}
+            />
+          ),
+        }}
+      />
+            <Tabs.Screen
+        name="inbox"
+        options={{
+          title: 'Inbox',
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon
+              icon={"message"}
+              color={color}
+              name="Timeline"
+              focused={focused}
+            />
+          ),
+        }}
+      />
+            <Tabs.Screen
+        name="faves"
+        options={{
+          title: 'Faves',
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon
+              icon={"star"}
+              color={color}
+              name="Timeline"
+              focused={focused}
+            />
+          ),
+        }}
+      />
+            <Tabs.Screen
+        name="store"
+        options={{
+          title: 'Store',
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon
+              icon={"infinity"}
+              color={color}
+              name="Timeline"
+              focused={focused}
+            />
           ),
         }}
       />

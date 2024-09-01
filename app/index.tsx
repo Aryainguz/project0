@@ -1,13 +1,14 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { Link } from 'expo-router'
+import { Link, router } from 'expo-router'
+import {Button} from 'react-native-paper'
 
 const index = () => {
   return (
     <View className='flex-1 justify-center items-center'>
-      <Link href={'/explore'}>
-      <Text className='text-2xl font-bold'>Go To Tabs</Text>
-      </Link>
+      <Button icon="mouse" buttonColor='blue' mode="contained" onPress={() => router.replace("/browse")}>
+    Press me
+  </Button>
     </View>
   )
 }
