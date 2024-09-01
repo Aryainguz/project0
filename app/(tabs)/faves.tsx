@@ -3,8 +3,8 @@ import React from 'react'
 
 const Faves = () => {
   return (
-    <View>
-      <Text>Faves</Text>
+    <View className='justify-center items-center flex-1'>
+      <Text className='text-black dark:text-white'>Faves</Text>
     </View>
   )
 }

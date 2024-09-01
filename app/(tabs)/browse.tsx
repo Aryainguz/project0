@@ -3,8 +3,8 @@ import React from 'react'
 
 const Browse = () => {
   return (
-    <View>
-      <Text>Browse</Text>
+    <View className='justify-center items-center flex-1'>
+      <Text className='text-black dark:text-white'>Browse</Text>
     </View>
   )
 }
