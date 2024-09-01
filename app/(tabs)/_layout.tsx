@@ -1,10 +1,9 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
 
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Text, View } from 'react-native';
 
 
@@ -43,7 +42,7 @@ export default function TabLayout() {
             <TabIcon
               icon={"guy-fawkes-mask"}
               color={color}
-              name="Timeline"
+              name="Browse"
               focused={focused}
             />
           ),
@@ -57,7 +56,7 @@ export default function TabLayout() {
             <TabIcon
               icon={"fire"}
               color={color}
-              name="Timeline"
+              name="Interest"
               focused={focused}
             />
           ),
@@ -71,7 +70,7 @@ export default function TabLayout() {
             <TabIcon
               icon={"message"}
               color={color}
-              name="Timeline"
+              name="Inbox"
               focused={focused}
             />
           ),
@@ -85,7 +84,7 @@ export default function TabLayout() {
             <TabIcon
               icon={"star"}
               color={color}
-              name="Timeline"
+              name="Faves"
               focused={focused}
             />
           ),
@@ -99,7 +98,7 @@ export default function TabLayout() {
             <TabIcon
               icon={"infinity"}
               color={color}
-              name="Timeline"
+              name="Store"
               focused={focused}
             />
           ),
