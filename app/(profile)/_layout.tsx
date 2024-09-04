@@ -11,8 +11,13 @@ const Layout = () => {
         name="profile" 
         options={{
           title: 'Nicoalas Angelo',
+                    headerStyle: {
+            backgroundColor: '#161622',
+         
+          },
+          headerTintColor: '#fff',
           headerLeft: () => (
-            <TouchableOpacity onPress={() => router.back()} style={{ marginHorizontal: 10 }}>
+            <TouchableOpacity onPress={() =>router.replace("/browse")} style={{ marginHorizontal: 10 }}>
               <AntDesign name="arrowleft" size={25} color="#fff" />
             </TouchableOpacity>
           ),

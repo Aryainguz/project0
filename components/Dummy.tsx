@@ -1,10 +1,10 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import { ScrollView } from 'react-native'
 
 const Dummy = () => {
   return (
-    <View>
-    </View>
+    <ScrollView className='bg-primary'>
+    </ScrollView>
   )
 }
 

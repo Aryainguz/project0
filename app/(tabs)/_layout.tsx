@@ -33,6 +33,9 @@ export default function TabLayout() {
         tabBarShowLabel: false,
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
+        tabBarStyle: {
+          backgroundColor: "#161622",
+        },
       }}>
       <Tabs.Screen
         name="browse"
@@ -49,14 +52,14 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="interest"
+        name="matches"
         options={{
-          title: 'Interest',
+          title: 'Matches',
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
               icon={"fire"}
               color={color}
-              name="Interest"
+              name="Matches"
               focused={focused}
             />
           ),
