@@ -5,7 +5,7 @@ import { Button } from 'react-native-paper'
 
 const Browse = () => {
   return (
-    <View className='justify-center items-center flex-1'>
+    <View className='justify-center items-center flex-1 bg-primary'>
        <Button icon="mouse" buttonColor='yellow' textColor='black' mode="contained" onPress={() => router.replace("/profile")}>
     Press me
   </Button>
