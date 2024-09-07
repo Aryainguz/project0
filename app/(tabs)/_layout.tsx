@@ -4,7 +4,7 @@ import React from 'react';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Text, View } from 'react-native';
+import { Image, Text, View } from 'react-native';
 
 
 const TabIcon = ({ icon, color, name, focused }:
@@ -12,11 +12,25 @@ const TabIcon = ({ icon, color, name, focused }:
 ) => {
   return (
     <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-      <MaterialCommunityIcons
+    { name === "Profile" ? 
+     (
+    <Image
+    source={require("@/assets/images/avatar.jpg")}
+    className="rounded-full"
+      style={{
+        width: 24,
+        height: 24,
+        tintColor: color,
+      }}
+    />
+    ):(
+      (  <MaterialCommunityIcons
         name={icon}
         size={24}
         color={color}
-      />
+      /> )
+    )
+    }
       <Text style={{ color, fontSize: 12, fontWeight: '500' }}>
         {name}
       </Text>
@@ -80,28 +94,28 @@ export default function TabLayout() {
         }}
       />
             <Tabs.Screen
-        name="faves"
+        name="groups"
         options={{
-          title: 'Faves',
+          title: 'Groups',
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
-              icon={"star"}
+              icon={"account-group"}
               color={color}
-              name="Faves"
+              name="Groups"
               focused={focused}
             />
           ),
         }}
       />
             <Tabs.Screen
-        name="store"
+        name="(profile)"
         options={{
-          title: 'Store',
+          title: 'Profile',
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
-              icon={"infinity"}
+              icon={"face-man"}
               color={color}
-              name="Store"
+              name="Profile"
               focused={focused}
             />
           ),

@@ -16,11 +16,11 @@ const Layout = () => {
          
           },
           headerTintColor: '#fff',
-          headerLeft: () => (
-            <TouchableOpacity onPress={() =>router.replace("/browse")} style={{ marginHorizontal: 10 }}>
-              <AntDesign name="arrowleft" size={25} color="#fff" />
-            </TouchableOpacity>
-          ),
+          // headerLeft: () => (
+          //   <TouchableOpacity onPress={() =>router.replace("/browse")} style={{ marginHorizontal: 10 }}>
+          //     <AntDesign name="arrowleft" size={25} color="#fff" />
+          //   </TouchableOpacity>
+          // ),
           headerRight: () => (
             <TouchableOpacity onPress={() => router.replace("/browse")} style={{ marginHorizontal: 10 }}>
               <AntDesign name="setting" size={25} color="#fff" />
